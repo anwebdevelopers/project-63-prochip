@@ -1,0 +1,120 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+@import "components/icons.scss";
+
+*:focus::-webkit-input-placeholder {color: transparent}
+*:focus::-moz-placeholder          {color: transparent}
+*:focus:-moz-placeholder           {color: transparent}
+*:focus:-ms-input-placeholder      {color: transparent}
+
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #666;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #666;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+body {
+	position: relative;
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.25;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+	background-color: #fff;
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.container {
+	max-width: 980px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+}
+.title {
+	margin: 0;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+
+//Custom Styles Here
+@import "components/header.scss";
+@import "components/directory.scss";
+
+//@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+//@import "components/media.scss";
+
+//Load Libs SASS
+//@import "html/libs/animate/animate.sass";
+//@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+//@import "html/libs/magnific-popup/dist/magnific-popup";
+
+@media only screen and (max-width : 980px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}
