@@ -40,7 +40,17 @@ $(function() {
 
     $window.resize(function() {
         $headerButtonMenu.removeClass('active');
-        $headerMenu.removeAttr('style');
-        $headerMenu.find('ul, li').removeAttr('style').removeClass('active');
+        $headerMenu.removeAttr('style').find('ul, li').removeAttr('style').removeClass('active');
+    });
+
+    //*****************************************************//
+    //Product Tabs
+    //*****************************************************//
+
+    $('.directory').each(function() {
+        $(this).find('.directory__item').not(':first-child').hide();
+        $(this).find('.directory__switch').on('click', 'button:not(.active)', function() {
+            $(this).addClass('active').siblings().removeClass('active').closest('.directory').find('.directory__item').slideUp(200).eq($(this).index()).slideDown(200);
+        }).find('button').first().addClass('active');
     });
 });
