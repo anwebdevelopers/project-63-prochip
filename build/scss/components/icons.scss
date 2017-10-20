@@ -5,6 +5,13 @@ i[class^="icon-"] {
     background-repeat: no-repeat;
 }
 
+.icon-more {
+    width: 7px;
+    height: 7px;
+    background-image: linear-gradient( currentColor 1px, rgba(0,0,0,0) 1px ) !important;
+    background-size: 100% 2px;
+    background-repeat: repeat-y !important;
+}
 .icon-link{
 	background-position: 0 -307px ;
 	width: 9px;

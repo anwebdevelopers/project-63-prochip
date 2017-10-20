@@ -328,6 +328,7 @@
             font-size: 20px;
             >li {
                 padding: 0;
+                text-align: center;
                 &:first-child {
                     background-image: none;
                 }
@@ -390,12 +391,12 @@
                     }
                 }
                 > a {
-
+                    width: auto;
                 }
             }
             li {
                 padding: 0;
-                background-image: linear-gradient(#e0e0e0,#e0e0e0);
+                background-image: linear-gradient(#efefef,#efefef);
                 background-repeat: no-repeat;
                 background-position: 0 0;
                 background-size: 100% 1px;

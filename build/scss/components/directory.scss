@@ -1,5 +1,5 @@
 .directory {
-    padding: 20px 0 20px 0;
+    padding: 20px 0 1px 0;
     background-color: #f6f6f6;
 }
 .directory__box {
@@ -59,7 +59,7 @@
     display: flex;
     flex-wrap: wrap;
     //padding: 25px 0 0 0;
-    margin: 0 -5px;
+    margin: 0 -5px 25px -5px;
 }
 .directory__routs-item {
     display: block;
@@ -70,9 +70,15 @@
     margin: 5px;
     padding: 12px;
     background-color: $main-color;
+    background-image: linear-gradient(to right,rgba(255,255,255,0),rgba(255, 255, 255, .5),rgba(255,255,255,0));
+    background-position: 0 100%;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
     border-radius: 20px;
     border-bottom: 3px solid #a64501;
-    box-shadow: 0 5px 15px 0 transparentize($main-color, .3);
+    box-shadow: inset 0 5px 10px 0 rgba(255, 255, 255, .2),
+                inset 0 -5px 10px 0 rgba(255, 255, 255, .2),
+                0 5px 15px 0 transparentize($main-color, .3);
     transition: all .5s ease;
     &:hover, &:active {
         background-color: transparentize($main-color, .1);
@@ -105,14 +111,14 @@
     width: 100%;
     font-size: 12px;
     text-transform: uppercase;
-    text-shadow: 0 1px 2px rgba(0,0,0, .8);
+    text-shadow: 0 1px 2px rgba(0,0,0, .6);
     word-wrap: break-word;
 }
 .directory__brands {
     display: flex;
     flex-wrap: wrap;
     //padding: 25px 0 0 0;
-    margin: 0 -5px;
+    margin: 0 -5px 25px -5px;
 }
 .directory__brands-item {
     display: block;

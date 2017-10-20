@@ -79,12 +79,49 @@ a {
 	margin: 0;
 	font-size: 30px;
 	font-weight: 300;
+	line-height: 1.1;
+	text-shadow: 0 0 0 currentColor;
+}
+.subtitle {
+	margin: 20px 0 0 0;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.button {
+	@include btn;
+	padding: 8px 20px;
+	font-size: 12px;
+    line-height: 1;
+	font-family: inherit;
+	text-transform: uppercase;
+	text-shadow: 0 1px 2px rgba(0,0,0, .6);
+	color: #fff;
+
+    background-color: $main-color;
+    border-radius: 15px;
+    background-image: linear-gradient(to right,rgba(255,255,255,0),rgba(255, 255, 255, .5),rgba(255,255,255,0));
+    background-position: 0 100%;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #a64501;
+    box-shadow: inset 0 5px 20px 0 rgba(255, 255, 255, .3),
+                inset 0 -5px 20px 0 rgba(255, 255, 255, .3);
+    transition: all .5s ease;
+    &:hover, &:active {
+        background-color: transparentize($main-color, .1);
+        filter: saturate(1.3);
+    }
 }
 
 
 //Custom Styles Here
 @import "components/header.scss";
 @import "components/directory.scss";
+@import "components/page.scss";
+@import "components/recent.scss";
+@import "components/about.scss";
+@import "components/footer.scss";
 
 //@import "build/scss/components/magnific-popup.scss";
 
@@ -93,7 +130,7 @@ a {
 
 //Load Libs SASS
 //@import "html/libs/animate/animate.sass";
-//@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
 //@import "html/libs/superfish/dist/css/superfish";
 //@import "html/libs/font-awesome/scss/font-awesome.scss";
 //@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
@@ -115,6 +152,6 @@ a {
 
 }
 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 360px) {
 
 }

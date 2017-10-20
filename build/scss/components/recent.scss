@@ -1,0 +1,311 @@
+.recent {
+    padding: 30px 0 30px 0;
+}
+
+.recent__box {
+    margin: 25px 0 0;
+}
+
+.recent__header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recent__title {
+    flex: 1 1 auto;
+    margin: 0 20px 0 0;
+}
+
+.recent__links {
+    flex: 0 1 auto;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        margin: 0 20px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: $gray;
+            transition: all 0.5s ease;
+
+            &:active,
+            &:hover {
+                text-decoration: underline;
+            }
+
+            i[class^="icon-"] {
+                margin-right: 7px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.recent__box {
+    margin: 25px -10px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    &.owl-carousel {
+        display: block;
+        width: auto;
+
+        .owl-stage {
+            .owl-item {
+                .recent__item {
+                    width: auto;
+                }
+
+                .recent__item-img {
+                    img {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .owl-nav {
+            margin: 0 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .owl-next,
+            .owl-prev {
+                flex: 0 1 auto;
+                position: relative;
+                width: 30px;
+                height: 20px;
+                transition: all 0.5s ease;
+                &:active,
+                &:hover {
+                    &:before {
+                        border-color: $main-color;
+                    }
+                    &:after {
+                        background-color: $main-color;
+                    }
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    width: 15px;
+                    height: 15px;
+                    border-left: 2px solid $gray;
+                    border-bottom: 2px solid $gray;
+                    transition: all 0.5s ease;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 2px;
+                    width: 100%;
+                    background-color: $gray;
+                    transition: all 0.5s ease;
+                }
+            }
+
+            .owl-prev {
+                &:before {
+                    left: 0;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+            }
+
+            .owl-next {
+                &:before {
+                    right: 0;
+                    transform: translateY(-50%) rotate(-135deg);
+                }
+            }
+        }
+
+        .owl-dots {
+            flex: 0 1 auto;
+            margin: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .owl-dot {
+                flex: 0 0 auto;
+                width: 14px;
+                height: 21px;
+                margin: 0 30px;
+                background-color: #ececec;
+                border: 1px solid $gray;
+                transition: all 0.5s ease;
+                position: relative;
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    top: -1px;
+                    width: 14px;
+                    height: 21px;
+                    border: 1px solid $gray;
+                    background-color: #ececec;
+                    transition: all 0.5s ease;
+                }
+                &:before {
+                    left: -16px;
+                }
+                &:after {
+                    right: -16px;
+                }
+                &:active,
+                &:hover,
+                &.active {
+                    border-color: $main-color;
+                    background-color: transparent;
+                    &:before, &:after {
+                        border-color: $main-color;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.recent__item {
+    flex: 0 0 auto;
+    width: calc(33.33% - 20px);
+    margin: 0 10px 40px;
+}
+
+.recent__item-header {
+    display: flex;
+    padding: 0 0 15px;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.recent__item-date {
+    flex: 0 0 auto;
+    width: 30%;
+    color: $gray;
+}
+
+.recent__item-day {
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.recent__item-img {
+    flex: 0 0 auto;
+    align-self: center;
+    margin: 0 0 0 10px;
+    width: calc(70% - 10px);
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+.recent__item-title {
+    margin: 15px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.5s ease;
+
+        &:active,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.recent__item-text {
+    margin: 10px 0 0;
+    font-size: 12px;
+    color: $gray;
+}
+
+.recent__item-link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 0 0;
+    text-decoration: none;
+    color: $main-color;
+    transition: all 0.5s ease;
+
+    &:active,
+    &:hover {
+        text-decoration: underline;
+    }
+
+    i[class^="icon-"] {
+        margin-right: 7px;
+        text-decoration: none;
+    }
+}
+
+
+@media only screen and (max-width : 980px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .recent__box {
+        &.owl-carousel {
+            .owl-dots {
+                margin: 0 0 0 16px;
+                .owl-dot {
+                    margin: 0 16px;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .recent__item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+    .recent__box {
+        display: block;
+        &.owl-carousel {
+            .owl-dots {
+                margin: 0 12px;
+                .owl-dot {
+                    margin: 0 4px;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .recent__item {
+        width: auto;
+    }
+}
