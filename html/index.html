@@ -18,12 +18,15 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
 
+	<!-- ***************************************************** -->
+	<!-- HEADER -->
+	<!-- ***************************************************** -->
 	<header class="header">
 		<div class="header__container container">
 			<div class="header__top">
@@ -40,7 +43,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#authorize" class="popup-with-move-anim">
 							<i class="icon-authorize"></i><span>Авторизация</span>
 						</a>
 					</li>
@@ -80,6 +83,9 @@
 		</div>
 	</header>
 
+	<!-- ***************************************************** -->
+	<!-- DIRECTORY -->
+	<!-- ***************************************************** -->
 	<section class="directory">
 		<div class="directory__container container">
 			<header class="directory__header">
@@ -252,10 +258,20 @@
 
 	</section>
 
+	<!-- ***************************************************** -->
+	<!-- CONTENT -->
+	<!-- ***************************************************** -->
 	<div class="page">
 		<div class="page__container container">
 			<div class="page__box">
+				<!-- ***************************************************** -->
+				<!-- MAIN SECTIONS -->
+				<!-- ***************************************************** -->
 				<main class="page__main">
+
+					<!-- ***************************************************** -->
+					<!-- RECENT POSTS SECTION -->
+					<!-- ***************************************************** -->
 					<section class="recent">
 						<header class="recent__header">
 							<h2 class="recent__title title">Новости</h2>
@@ -458,6 +474,10 @@
 							</article>
 						</div>
 					</section>
+
+					<!-- ***************************************************** -->
+					<!-- ABOUT US SECTION -->
+					<!-- ***************************************************** -->
 					<section class="about">
 						<h2 class="about__title title">О нас</h2>
 						<h3 class="about__subtitle subtitle">ПРОЧИП – это обособленное подразделение компании ПРОСОФТ, специализирующееся на дистрибуции электронных компонентов.</h3>
@@ -483,10 +503,22 @@
 						</div>
 					</section>
 				</main>
+
+				<!-- ***************************************************** -->
+				<!-- ASIDE -->
+				<!-- ***************************************************** -->
 				<aside  class="page__aside">
+
+					<!-- ***************************************************** -->
+					<!-- ASIDE AD BANNER -->
+					<!-- ***************************************************** -->
 					<div class="banner">
 						<img src="img/img-banner.jpg" alt="">
 					</div>
+
+					<!-- ***************************************************** -->
+					<!-- ASIDE LINKS -->
+					<!-- ***************************************************** -->
 					<div class="links">
 						<a href="#" class="links__item">
 							<figure class="links__item-icon">
@@ -501,6 +533,10 @@
 							<span class="links__item-text">СКАЧАТЬ КАТАЛОГ <br>pdf 2,5 MB</span>
 						</a>
 					</div>
+
+					<!-- ***************************************************** -->
+					<!-- ASIDE DEBRIEFING -->
+					<!-- ***************************************************** -->
 					<form class="debriefing">
 						<div class="debriefing__title">Нашему сайту нужен редизайн?</div>
 						<fieldset class="debriefing__box">
@@ -524,6 +560,9 @@
 		</div>
 	</div>
 
+	<!-- ***************************************************** -->
+	<!-- FOOTER -->
+	<!-- ***************************************************** -->
 	<footer class="footer">
 		<div class="footer__container container">
 			<div class="footer__box">
@@ -573,13 +612,126 @@
 					<span class="footer__copy">© ProChip, 2017</span>
 				</div>
 				<div class="footer__callback">
-					<a href="#" class="button">
+					<a  href="#callback" class="popup-with-move-anim button">
 						<i class="icon-chat"></i><span>обратная связь</span>
 					</a>
 				</div>
 			</div>
 		</div>
 	</footer>
+
+	<div class="hidden">
+
+		<!-- ***************************************************** -->
+		<!-- AUTHORIZATION -->
+		<!-- ***************************************************** -->
+
+		<form id="authorize" class="popup form my-mfp-slide-bottom zoom-anim-dialog">
+			<h2 class="form__title title title_orange">Авторизация</h2>
+			<label class="form__field">
+				<span>E-mail</span>
+				<input type="text">
+			</label>
+			<label class="form__field">
+				<span>Пароль</span>
+				<input type="text">
+			</label>
+			<div class="form__link form__link_align_right">
+				<a href="#recovery" class="popup-with-move-anim">Забыли пароль?</a>
+			</div>
+			<div class="form__buttons">
+				<button type="submit" class="button">Вход</button>
+				<a href="#" class="button">Регистрация</a>
+			</div>
+		</form>
+
+		<!-- ***************************************************** -->
+		<!-- RECOVERY PASSWORD -->
+		<!-- ***************************************************** -->
+
+		<form id="recovery" class="popup form my-mfp-slide-bottom zoom-anim-dialog">
+			<h2 class="form__title title title_orange">Восстановление пароля</h2>
+			<p class="form__text">Введите ваш логин или e-mail</p>
+			<label class="form__field">
+				<span>Логин</span>
+				<input type="text">
+			</label>
+			<label class="form__field">
+				<span>E-mail</span>
+				<input type="text">
+			</label>
+			<div class="form__buttons">
+				<button type="submit" class="button">восстановить</button>
+			</div>
+		</form>
+
+		<!-- ***************************************************** -->
+		<!-- CALLBACK -->
+		<!-- ***************************************************** -->
+
+		<form id="callback" class="popup form my-mfp-slide-bottom zoom-anim-dialog">
+			<h2 class="form__title title title_orange">Форма обратной связи</h2>
+			<fieldset class="form__switch">
+				<label>
+					<input type="radio" name="questiontype" checked>
+					<span>технический вопрос</span>
+				</label>
+				<label>
+					<input type="radio" name="questiontype">
+					<span>общий вопрос</span>
+				</label>
+			</fieldset>
+			<label class="form__field">
+				<span>Сообщение</span>
+				<textarea></textarea>
+			</label>
+			<label class="form__field">
+				<span>Ф.И.О.</span>
+				<input type="text">
+			</label>
+			<label class="form__field">
+				<span>Компания</span>
+				<input type="text">
+			</label>
+			<label class="form__field">
+				<span>Должность</span>
+				<input type="text">
+			</label>
+			<label class="form__field">
+				<span>E-mail</span>
+				<input type="text">
+			</label>
+			<label class="form__field">
+				<span>Телефон</span>
+				<input type="text">
+			</label>
+			<div class="form__item form__item_border">
+				<label class="form__check">
+					<input type="checkbox">
+					<span>Я согласен на обработку моих персональных данных в объеме содержащихся в анкете данных для получения дополнительной информации</span>
+				</label>
+			</div>
+			<div class="form__item form__item_border">
+				<div class="form__captcha">
+					<div class="form__captcha-question">
+						<div class="form__captcha-question-img">
+							<img src="img/img-captcha.aspx" alt="">
+						</div>
+						<button type="button" class="form__captcha-question-button"><i class="icon-reload"></i></button>
+					</div>
+					<label class="form__captcha-answer">
+						<span>Введите код с картинки</span>
+						<input type="text">
+					</label>
+				</div>
+			</div>
+			<div class="form__buttons">
+				<p class="form__attention">Все поля обязательны для заполнения</p>
+				<button type="submit" class="button">отправить</button>
+			</div>
+		</form>
+
+	</div>
 
 	<!-- Load Scripts Start -->
 	<script src="js/libs.js" defer></script>

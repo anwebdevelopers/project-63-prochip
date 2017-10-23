@@ -1,0 +1,74 @@
+.faq {
+    padding: 30px 0;
+}
+.faq__text {
+    a {
+        text-decoration: none;
+        color: $main-color;
+        &:hover, &:active {
+            text-decoration: underline;
+        }
+    }
+}
+.faq__list {
+    margin: 25px 0 0 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #c0c0c0;
+}
+.faq__item {
+    border-bottom: 1px solid #c0c0c0;
+    &:last-child {
+        border-bottom: none;
+    }
+}
+.faq__item-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 15px;
+}
+.faq__item-text {
+    margin: 0;
+    padding: 15px 15px;
+    background-color: #f3f3f3;
+    border-top: 1px solid #c0c0c0;
+}
+.accordeon {
+    position: relative;
+    &.active {
+        .accordeon__button {
+            //background-image: linear-gradient(#999999,#999999);
+            background-size: 7px 1px;
+            background-position: 2px 5px;
+            background-repeat: no-repeat;
+        }
+        .accordeon__title {
+            color: $main-color;
+        }
+    }
+}
+.accordeon__title {
+    padding-left: 30px;
+    transition: all .5s ease;
+}
+.accordeon__box {
+    padding-left: 30px;
+}
+.accordeon__button {
+    @include btn;
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    background-image: linear-gradient(#999999,#999999),linear-gradient(#999999,#999999);
+    background-size: 7px 1px, 1px 7px;
+    background-position: 2px 5px, 5px 2px;
+    background-repeat: no-repeat, no-repeat;
+    &:hover, &:active {
+        background-image: linear-gradient($main-color,$main-color),linear-gradient($main-color,$main-color);
+    }
+}

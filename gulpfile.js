@@ -37,13 +37,13 @@ var basePaths = {
     imageop = require("gulp-image-optimization"),
     uglify = require("gulp-uglify");
 
-gulp.task('browser-sync', ['styles', 'scripts'], function() {
-		browserSync.init({
-				server: {
-						baseDir: "./html"
-				},
-				notify: false
-		});
+gulp.task('browser-sync', ['full', 'scripts'], function() {
+	browserSync.init({
+		server: {
+			baseDir: "./html"
+		},
+		notify: false
+	});
 });
 
 gulp.task('styles', function () {
@@ -72,7 +72,7 @@ gulp.task('scripts', function() {
 		// './html/libs/superfish/dist/js/superfish.min.js',
 		// './html/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
 		// './html/libs/jquery-equalheight/jquery.equalheight.min.js',
-		// './html/libs/magnific-popup/dist/jquery.magnific-popup.min.js'
+		'./html/libs/magnific-popup/dist/jquery.magnific-popup.min.js'
 		])
 	.pipe(concat('libs.js'))
 	//.pipe(uglify()) //Minify libs.js
@@ -87,10 +87,11 @@ gulp.task('full', function () {
 	.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
 	.pipe(csscomb())
 	.pipe(gulp.dest('html/css'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function () {
-	gulp.watch('build/scss/**/*.scss', ['styles']);
+	gulp.watch('build/scss/**/*.scss', ['full']);
 	gulp.watch('html/libs/**/*.js', ['scripts']);
 	gulp.watch('html/js/*.js').on("change", browserSync.reload);
 	gulp.watch('html/*.html').on('change', browserSync.reload);

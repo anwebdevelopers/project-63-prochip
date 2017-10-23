@@ -96,4 +96,35 @@ $(function() {
         });
     });
 
+    /*******************************************************/
+    //POPUP
+    /*******************************************************/
+
+    $('.popup-with-move-anim').magnificPopup({
+        type: 'inline',
+        fixedContentPos: false,
+        fixedBgPos: true,
+        overflowY: 'auto',
+        closeBtnInside: true,
+        preloader: false,
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-slide-bottom'
+    });
+
+    /*******************************************************/
+    //ACCORDEON
+    /*******************************************************/
+    var $accordeon = $('.accordeon'),
+        $accordeonBox = $('.accordeon__box');
+    $accordeon.each(function() {
+        var $this = $(this);
+        $this.prepend('<button type="button" class="accordeon__button"></button>');
+        $this.is(':first-child') ? $this.addClass('active') : $this.find($accordeonBox).hide();
+    });
+    $accordeon.on('click', '.accordeon__button', function() {
+        var $this = $(this);
+        $this.closest($accordeon).hasClass('active') ? $this.closest($accordeon).removeClass('active').find($accordeonBox).slideUp(300) : $this.closest($accordeon).addClass('active').find($accordeonBox).slideDown(300).end().siblings().removeClass('active').find($accordeonBox).slideUp(300);
+    });
+
 });

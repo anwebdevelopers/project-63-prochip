@@ -1,4 +1,4 @@
-.icon-link, .icon-chat, .icon-home, .icon-like, .icon-twit, .icon-goo, .icon-eng, .icon-rus, .icon-authorize, .icon-basket, .icon-nav, .icon-rss, .icon-phone, .icon-email, .icon-loup{
+.icon-link, .icon-chat, .icon-home, .icon-like, .icon-twit, .icon-goo, .icon-eng, .icon-rus, .icon-authorize, .icon-basket, .icon-nav, .icon-rss, .icon-phone, .icon-email, .icon-loup, .icon-reload{
 	background: url(sprites.png) no-repeat;
 }
 
@@ -87,8 +87,14 @@
 }
 
 .icon-loup{
-	background-position: 0 -321px ;
+	background-position: 0 -323px ;
 	width: 16px;
 	height: 16px;
+}
+
+.icon-reload{
+	background-position: 0 -344px ;
+	width: 26px;
+	height: 27px;
 }
 
