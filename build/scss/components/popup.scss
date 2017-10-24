@@ -73,6 +73,28 @@
             }
         }
     }
+    .form__field-file {
+        position: relative;
+        flex: 0 0 auto;
+        width: 72%;
+
+        display: flex;
+        align-items: center;
+        input[type=file] {
+            position: absolute;
+            z-index: -1;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+        input {
+            flex: 1 1 auto;
+        }
+        button {
+            flex: 0 0 auto;
+            margin: 5px 0 0 10px;
+        }
+    }
 }
 .form__check {
     margin: 20px 0 0 0;
@@ -303,6 +325,9 @@
         input, textarea {
             width: 100%;
         }
+        .form__field-file {
+            width: 100%;
+        }
     }
     .form__captcha {
         display: block;
@@ -317,7 +342,7 @@
 }
 
 @media only screen and (max-width : 360px) {
-    .popup {
+    .form {
         padding: 30px 15px;
     }
 }

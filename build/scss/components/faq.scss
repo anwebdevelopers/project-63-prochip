@@ -21,6 +21,11 @@
     &:last-child {
         border-bottom: none;
     }
+    &.active {
+        .faq__item-title {
+            color: $main-color;
+        }
+    }
 }
 .faq__item-title {
     margin: 0;
@@ -34,28 +39,40 @@
     background-color: #f3f3f3;
     border-top: 1px solid #c0c0c0;
 }
-.accordeon {
+.accordion {
     position: relative;
     &.active {
-        .accordeon__button {
+        > .accordion__button {
             //background-image: linear-gradient(#999999,#999999);
             background-size: 7px 1px;
             background-position: 2px 5px;
             background-repeat: no-repeat;
         }
-        .accordeon__title {
-            color: $main-color;
+        > .accordion__title {
+
+        }
+    }
+    .accordion__box {
+        .accordion__button {
+            left: 0;
+        }
+        .accordion__title {
+            padding-left: 20px !important;
+            transition: all .5s ease;
+        }
+        .accordion__box {
+            padding-left: 20px !important;
         }
     }
 }
-.accordeon__title {
-    padding-left: 30px;
+.accordion__title {
+    padding-left: 30px !important;
     transition: all .5s ease;
 }
-.accordeon__box {
-    padding-left: 30px;
+.accordion__box {
+    padding-left: 30px !important;
 }
-.accordeon__button {
+.accordion__button {
     @include btn;
     position: absolute;
     top: 11px;

@@ -48,10 +48,12 @@ $(function() {
     //*****************************************************//
 
     $('.directory').each(function() {
-        $(this).find('.directory__item').not(':first').hide();
-        $(this).find('.directory__switch').on('click', 'button:not(.active)', function() {
-            $(this).addClass('active').siblings().removeClass('active').closest('.directory').find('.directory__item').slideUp(200).eq($(this).index()).slideDown(200);
-        }).find('button').first().addClass('active');
+        if ( $(this).find('.directory__tab').length && $(this).find('.directory__switch').length ) {
+            $(this).find('.directory__tab').not(':first').hide();
+            $(this).find('.directory__switch').on('click', 'button:not(.active)', function() {
+                $(this).addClass('active').siblings().removeClass('active').closest('.directory').find('.directory__tab').slideUp(200).eq($(this).index()).slideDown(200);
+            }).find('button').first().addClass('active');
+        }
     });
 
     /*******************************************************/
@@ -72,7 +74,7 @@ $(function() {
             361: {
                 items: 2
             },
-            769: {
+            641: {
                 items: 3
             }
         },
@@ -113,18 +115,43 @@ $(function() {
     });
 
     /*******************************************************/
-    //ACCORDEON
+    //accordion
     /*******************************************************/
-    var $accordeon = $('.accordeon'),
-        $accordeonBox = $('.accordeon__box');
-    $accordeon.each(function() {
+     $('.accordion').each(function() {
         var $this = $(this);
-        $this.prepend('<button type="button" class="accordeon__button"></button>');
-        $this.is(':first-child') ? $this.addClass('active') : $this.find($accordeonBox).hide();
+        if ( $this.children('.accordion__box').length ) {
+            $this.prepend('<button type="button" class="accordion__button"></button>');
+        }
+        ($this.hasClass('current') || $this.find('.current').length) ? $this.addClass('active') : $this.children('.accordion__box').hide();
+    }).on('click', '.accordion__button', function(e) {
+        e.stopPropagation();
+        var $this = $(this);
+        $this.closest('.accordion').hasClass('active') ? $this.closest('.accordion').removeClass('active').children('.accordion__box').slideUp(300) : $this.closest('.accordion').addClass('active').children('.accordion__box').slideDown(300).end().siblings().removeClass('active').children('.accordion__box').slideUp(300);
     });
-    $accordeon.on('click', '.accordeon__button', function() {
-        var $this = $(this);
-        $this.closest($accordeon).hasClass('active') ? $this.closest($accordeon).removeClass('active').find($accordeonBox).slideUp(300) : $this.closest($accordeon).addClass('active').find($accordeonBox).slideDown(300).end().siblings().removeClass('active').find($accordeonBox).slideUp(300);
+
+    /*******************************************************/
+    //CUSTOM input[type=file]
+    /*******************************************************/
+
+    $('.form__field-file').on('click', 'button', function() {
+        $(this).siblings('input[type=file]').trigger('click');
+    }).on('change', 'input[type=file]', function() {
+        $(this).siblings('input[type=text]').val($(this).val());
+    });
+
+    //*****************************************************//
+    //NAV TABS
+    //*****************************************************//
+
+    $('.nav').each(function() {
+        if ( $(this).find('.nav__tab').length && $(this).find('.nav__buttons').length ) {
+            $(this).find('.nav__tab').each(function() {
+                $(this).find('.current').length ? $(this).addClass('active') : $(this).hide();
+            });
+            $(this).find('.nav__buttons').on('click', 'button:not(.active)', function() {
+                $(this).addClass('active').siblings().removeClass('active').closest('.nav').find('.nav__tab').slideUp(200).eq($(this).index()).slideDown(200);
+            }).find('button').eq($(this).find('.nav__tab').not(':hidden').index('.nav__tab')).addClass('active');
+        }
     });
 
 });
