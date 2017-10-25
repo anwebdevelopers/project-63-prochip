@@ -18,7 +18,7 @@ $(function() {
         $headerButtonMenu = $('.header__button-menu');
     $headerButtonMenu.click(function() {
         $(this).toggleClass('active');
-        $headerMenu.slideToggle(300);
+        $headerMenu.slideToggle(200);
     });
 
     /*******************************************************/
@@ -32,8 +32,8 @@ $(function() {
                 $li = $this.closest('li');
             if ( !$li.hasClass('active') ) {
                 e.preventDefault();
-                $ul.slideDown(300);
-                $li.addClass('active').siblings().removeClass('active').find('ul').slideUp(300);
+                $ul.slideDown(200);
+                $li.addClass('active').siblings().removeClass('active').find('ul').slideUp(200);
             }
         }
     });
@@ -86,14 +86,14 @@ $(function() {
     /*******************************************************/
     //ABOUT READ MORE
     /*******************************************************/
-    $('.about__content').each(function() {
+    $('.showmore').each(function() {
         $(this).children().not(':first').hide();
-        $(this).after('<button class="about__button">подробнее</button>');
-        $('.about__button').on('click', function() {
+        $(this).after('<div class="showmore-button"><button type="button">подробнее</button></div>');
+        $('.showmore-button').on('click', 'button', function() {
             if ( $(this).hasClass('active') ) {
-                $(this).removeClass('active').text('подробнее').prev('.about__content').children().not(':first').slideUp(300);
+                $(this).removeClass('active').text('подробнее').closest('.showmore-button').prev('.showmore').children().not(':first').slideUp(200);
             } else {
-                $(this).addClass('active').text('свернуть').prev('.about__content').children().not(':first').slideDown(300);
+                $(this).addClass('active').text('свернуть').closest('.showmore-button').prev('.showmore').children().not(':first').slideDown(200);
             }
         });
     });
@@ -126,7 +126,7 @@ $(function() {
     }).on('click', '.accordion__button', function(e) {
         e.stopPropagation();
         var $this = $(this);
-        $this.closest('.accordion').hasClass('active') ? $this.closest('.accordion').removeClass('active').children('.accordion__box').slideUp(300) : $this.closest('.accordion').addClass('active').children('.accordion__box').slideDown(300).end().siblings().removeClass('active').children('.accordion__box').slideUp(300);
+        $this.closest('.accordion').hasClass('active') ? $this.closest('.accordion').removeClass('active').children('.accordion__box').slideUp(200) : $this.closest('.accordion').addClass('active').children('.accordion__box').slideDown(200).end().siblings().removeClass('active').children('.accordion__box').slideUp(200);
     });
 
     /*******************************************************/
@@ -145,12 +145,23 @@ $(function() {
 
     $('.nav').each(function() {
         if ( $(this).find('.nav__tab').length && $(this).find('.nav__buttons').length ) {
-            $(this).find('.nav__tab').each(function() {
-                $(this).find('.current').length ? $(this).addClass('active') : $(this).hide();
-            });
+            if ( $(this).find('.nav__tab .current').length ) {
+                $(this).find('.nav__tab').each(function() {
+                    $(this).find('.current').length ? $(this).addClass('active') : $(this).hide();
+                });
+            } else {
+                $(this).find('.nav__tab').first('.nav__tab').addClass('active').siblings('.nav__tab').hide();
+            }
+
+            if (  $('.catalog__tab').length ) {
+                 $('.catalog__tab').eq($(this).find('.nav__tab.active').index('.nav__tab')).show().siblings('.catalog__tab').hide();
+            }
             $(this).find('.nav__buttons').on('click', 'button:not(.active)', function() {
                 $(this).addClass('active').siblings().removeClass('active').closest('.nav').find('.nav__tab').slideUp(200).eq($(this).index()).slideDown(200);
-            }).find('button').eq($(this).find('.nav__tab').not(':hidden').index('.nav__tab')).addClass('active');
+                if (  $('.catalog__tab').length ) {
+                     $('.catalog__tab').eq($(this).index()).slideDown(200).siblings('.catalog__tab').slideUp(200);
+                }
+            }).find('button').eq($(this).find('.nav__tab.active').index('.nav__tab')).addClass('active');
         }
     });
 

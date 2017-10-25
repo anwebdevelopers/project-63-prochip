@@ -24,34 +24,45 @@
             text-decoration: underline;
         }
     }
+    *:first-child {
+        margin-top: 0;
+    }
+    *:last-child {
+        margin-bottom: 0;
+    }
 }
-.about__button {
-    @include btn;
+.showmore {
+    will-change: height;
+}
+.showmore-button {
     margin: 20px 0 0 0;
-    position: relative;
-    color: $main-color;
-    padding: 0 0 0 15px;
-    font: inherit;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 3px;
-        left: 0;
-        transform:  rotate(-45deg);
-        width: 7px;
-        height: 7px;
-        border-left: 1px solid currentColor;
-        border-bottom: 1px solid currentColor;
-        transition: all 0.3s ease;
-    }
-    &:hover, &:active {
-        text-decoration: underline;
-        text-decoration-style: dashed;
-    }
-    &.active {
+    button {
+        @include btn;
+        position: relative;
+        color: $main-color;
+        padding: 0 0 0 15px;
+        font: inherit;
         &:before {
-            top: 6px;
-            transform:  rotate(135deg);
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 0;
+            transform:  rotate(-45deg);
+            width: 7px;
+            height: 7px;
+            border-left: 1px solid currentColor;
+            border-bottom: 1px solid currentColor;
+            transition: all 0.3s ease;
+        }
+        &:hover, &:active {
+            text-decoration: underline;
+            text-decoration-style: dashed;
+        }
+        &.active {
+            &:before {
+                top: 6px;
+                transform:  rotate(135deg);
+            }
         }
     }
 }

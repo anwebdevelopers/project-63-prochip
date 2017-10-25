@@ -1,4 +1,4 @@
-.icon-link, .icon-chat, .icon-home, .icon-like, .icon-twit, .icon-goo, .icon-eng, .icon-rus, .icon-authorize, .icon-basket, .icon-nav, .icon-rss, .icon-phone, .icon-email, .icon-loup, .icon-reload{
+.icon-link, .icon-chat, .icon-home, .icon-like, .icon-twit, .icon-goo, .icon-eng, .icon-rus, .icon-authorize, .icon-basket, .icon-nav, .icon-rss, .icon-phone, .icon-email, .icon-loup, .icon-reload, .icon-pdf, .icon-video, .icon-zoom, .icon-list, .icon-print{
 	background: url(sprites.png) no-repeat;
 }
 
@@ -96,5 +96,35 @@
 	background-position: 0 -344px ;
 	width: 26px;
 	height: 27px;
+}
+
+.icon-pdf{
+	background-position: 0 -373px ;
+	width: 24px;
+	height: 22px;
+}
+
+.icon-video{
+	background-position: 0 -398px ;
+	width: 24px;
+	height: 22px;
+}
+
+.icon-zoom{
+	background-position: 0 -423px ;
+	width: 24px;
+	height: 22px;
+}
+
+.icon-list{
+	background-position: 0 -448px ;
+	width: 24px;
+	height: 22px;
+}
+
+.icon-print{
+	background-position: 0 -473px ;
+	width: 24px;
+	height: 22px;
 }
 
