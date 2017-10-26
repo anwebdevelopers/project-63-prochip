@@ -1,0 +1,196 @@
+.basket {
+    padding: 30px 0;
+}
+.basket__text {
+
+}
+.basket__form {
+    margin: 30px 0 0 0;
+    border: 1px solid #b2b2b2;
+}
+
+.form__table-basket {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0 0 0;
+    border-collapse: collapse;
+
+    font-size: 12px;
+}
+.form__table-basket-number,
+.form__table-basket-name,
+.form__table-basket-quantity,
+.form__table-basket-unit,
+.form__table-basket-delete {
+    padding: 7px 10px;
+    border: 1px solid #c0c0c0;
+}
+.form__table-basket-head {
+    background-color: #f6f6f6;
+    color: $gray;
+    .form__table-basket-number,
+    .form__table-basket-name,
+    .form__table-basket-quantity,
+    .form__table-basket-unit,
+    .form__table-basket-delete {
+        font-weight: 400;
+    }
+}
+.form__table-basket-quantity-input {
+    display: block;
+    margin: 0;
+    width: 40px;
+    height: 27px;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+
+
+    padding: 3px 10px;
+
+    border: 1px solid #b2b2b2;
+    font: inherit;
+    text-align: center;
+}
+.form__table-basket-unit {
+    text-align: center;
+}
+.form__table-basket-delete-icon {
+    width: 27px;
+    height: 27px;
+    font-size: 30px;
+    line-height: 27px;
+    font-weight: 300;
+}
+.form__table-basket-delete-button {
+    @include btn;
+    width: 27px;
+    height: 27px;
+    font-family: inherit;
+    font-size: 30px;
+    line-height: 27px;
+    font-weight: 300;
+    color: $main-color;
+}
+.basket__form-add {
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+.basket__form-add-input {
+    flex: 1 1 auto;
+    display: block;
+    margin: 0 20px 0 0;
+    width: 100%;
+    height: 27px;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+
+
+    padding: 3px 10px;
+
+    border: 1px solid #b2b2b2;
+    font: inherit;
+}
+.basket__form-add-button {
+    flex: 0 0 auto;
+}
+.basket__form-comment {
+    margin: 20px 0 0 0;
+}
+.basket__form-comment-textarea {
+    display: block;
+    margin: 0;
+    width: 100%;
+    min-height: 65px;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+
+    resize: vertical;
+
+    padding: 3px 10px;
+
+    border: 1px solid #b2b2b2;
+    font: inherit;
+}
+
+@media only screen and (max-width : 980px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .form__table-basket {
+        display: block;
+        overflow-x: auto;
+        tbody {
+            display: block;
+        }
+    }
+    .form__table-basket-head {
+        display: none;
+    }
+    .form__table-basket-row {
+        display: flex;
+        flex-wrap: wrap;
+        &:last-child {
+            border-bottom: 1px solid #c0c0c0;
+        }
+    }
+    .form__table-basket-number {
+        flex: 0 0 auto;
+        display: block;
+        width: 30%;
+        background-color: #f6f6f6;
+        border-bottom: none;
+        border-right: none;
+    }
+    .form__table-basket-name {
+        flex: 0 0 auto;
+        display: block;
+        width: 70%;
+        background-color: #f6f6f6;
+        border-bottom: none;
+    }
+    .form__table-basket-quantity {
+        flex: 0 0 auto;
+        display: block;
+        width: 30%;
+        border-bottom: none;
+        border-right: none;
+    }
+    .form__table-basket-quantity-input {
+        width: 100%;
+    }
+    .form__table-basket-unit {
+        flex: 1 1 auto;
+        display: block;
+        width: auto;
+        border-bottom: none;
+        border-right: none;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+    .form__table-basket-delete {
+        flex: 0 0 auto;
+        display: block;
+        border-bottom: none;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}

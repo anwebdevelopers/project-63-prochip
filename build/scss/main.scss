@@ -92,6 +92,30 @@ a {
 }
 .text {
 	margin: 20px 0 0 0;
+	p {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	ul {
+		li {
+			margin: 5px 0 0 0;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: $main-color;
+		transition: all 0.5s ease;
+		&:active,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	*:first-child {
+		margin-top: 0;
+	}
+	*:last-child {
+		margin-bottom: 0;
+	}
 }
 .button {
 	@include btn;
@@ -137,6 +161,8 @@ a {
 @import "components/catalog.scss";
 @import "components/type.scss";
 @import "components/card.scss";
+@import "components/basket.scss";
+@import "components/application.scss";
 
 
 //ALWAYS END

@@ -62,7 +62,7 @@
 				</form>
 				<nav class="header__menu">
 					<ul>
-						<li class="has-submenu current">
+						<li class="has-submenu">
 							<a href="#">О нас</a>
 							<ul>
 								<li><a href="#">О нас</a></li>
@@ -92,8 +92,7 @@
 			<nav class="page__breadcrumbs">
 				<ul>
 					<li><a href="#"><i class="icon-home"></i></a></li>
-					<li><a href="#">О нас</a></li>
-					<li>Вопросы и ответы</li>
+					<li>Корзина</li>
 				</ul>
 			</nav>
 
@@ -109,11 +108,12 @@
 					<!-- ***************************************************** -->
 					<nav class="nav">
 						<ul class="nav__list">
-							<li><a href="#">О нас</a></li>
-							<li><a href="#">Наши координаты</a></li>
-							<li><a href="#">Филиалы и представительства</a></li>
-							<li><a href="#">Карьера</a></li>
-							<li class="current"><a href="#">Вопросы и ответы</a></li>
+							<li>
+								<a href="#">Профиль</a>
+							</li>
+							<li class="current">
+								<a href="#">Заявки</a>
+							</li>
 						</ul>
 					</nav>
 
@@ -149,52 +149,59 @@
 				<main class="page__main">
 
 					<!-- ***************************************************** -->
-					<!-- FAQ SECTION -->
+					<!-- APPLICATION SECTION -->
 					<!-- ***************************************************** -->
-					<section class="faq">
-						<h1 class="faq__title title_orange title">Вопросы и ответы</h1>
-						<div class="faq__text text">
-							<p>Если Вы не нашли ответ на интересующий Вас вопрос, Вы можете обратиться в <a href="#">техподдержку</a> за дополнительными разъяснениями.</p>
+					<form class="application">
+						<h1 class="application__title title_orange title">Заявки</h1>
+
+						<div class="application__form form">
+							<h3 class="form__title subtitle">Заявка №123 от 12.03.2017</h3>
+							<table class="form__table-application">
+								<tr class="form__table-application-head">
+									<th class="form__table-application-number">Номер</th>
+									<th class="form__table-application-name">Наименование</th>
+									<th class="form__table-application-quantity">Кол-во</th>
+								</tr>
+								<tr class="form__table-application-row">
+									<td class="form__table-application-number">AN231E04-E2 -QFNTY</td>
+									<td class="form__table-application-name">Динамически программируемая аналоговая микросхема 3-го поколения</td>
+									<td class="form__table-application-quantity">8</td>
+								</tr>
+								<tr class="form__table-application-row">
+									<td class="form__table-application-number">AN231E04-E2 -QFNTY</td>
+									<td class="form__table-application-name">Динамически программируемая аналоговая микросхема 3-го поколения</td>
+									<td class="form__table-application-quantity">50</td>
+								</tr>
+							</table>
 						</div>
-						<ul class="faq__list">
-							<li class="faq__item accordion">
-								<h3 class="faq__item-title accordion__title">Что такое DC/DC преобразователи?</h3>
-								<p class="faq__item-text accordion__box">Решить проблему создания разнообразных аналоговых устройств, снизив стоимость и габариты, позволяет использование программируемых аналоговых интегральных схем - ПАИС (FPAA), лидером в производстве которых является компания Anadigm.</p>
-							</li>
-							<li class="faq__item accordion">
-								<h3 class="faq__item-title accordion__title">Какие программируемые аналоговые ИМС выбрать?</h3>
-								<p class="faq__item-text accordion__box">Решить проблему создания разнообразных аналоговых устройств, снизив стоимость и габариты, позволяет использование программируемых аналоговых интегральных схем - ПАИС (FPAA), лидером в производстве которых является компания Anadigm.</p>
-							</li>
-							<li class="faq__item accordion">
-								<h3 class="faq__item-title accordion__title">Как высчитать стоимость расширенной гарантии?</h3>
-								<p class="faq__item-text accordion__box">Решить проблему создания разнообразных аналоговых устройств, снизив стоимость и габариты, позволяет использование программируемых аналоговых интегральных схем - ПАИС (FPAA), лидером в производстве которых является компания Anadigm.</p>
-							</li>
-							<li class="faq__item accordion">
-								<h3 class="faq__item-title accordion__title">Почему иногда, с момента оплаты, долго не указывается предварительный срок поставки?</h3>
-								<p class="faq__item-text accordion__box">Решить проблему создания разнообразных аналоговых устройств, снизив стоимость и габариты, позволяет использование программируемых аналоговых интегральных схем - ПАИС (FPAA), лидером в производстве которых является компания Anadigm.</p>
-							</li>
-							<li class="faq__item accordion">
-								<h3 class="faq__item-title accordion__title">Сертификация оборудования: Будут ли сертификаты соответствия Росстандарт?</h3>
-								<p class="faq__item-text accordion__box">Решить проблему создания разнообразных аналоговых устройств, снизив стоимость и габариты, позволяет использование программируемых аналоговых интегральных схем - ПАИС (FPAA), лидером в производстве которых является компания Anadigm.</p>
-							</li>
-							<li class="faq__item accordion">
-								<h3 class="faq__item-title accordion__title">Как связаться с ProChip по электронной почте?</h3>
-								<p class="faq__item-text accordion__box">Решить проблему создания разнообразных аналоговых устройств, снизив стоимость и габариты, позволяет использование программируемых аналоговых интегральных схем - ПАИС (FPAA), лидером в производстве которых является компания Anadigm.</p>
-							</li>
-							<li class="faq__item accordion">
-								<h3 class="faq__item-title accordion__title">Существует ли исходящий контроль качества производимой продукции? </h3>
-								<p class="faq__item-text accordion__box">Решить проблему создания разнообразных аналоговых устройств, снизив стоимость и габариты, позволяет использование программируемых аналоговых интегральных схем - ПАИС (FPAA), лидером в производстве которых является компания Anadigm.</p>
-							</li>
-							<li class="faq__item accordion">
-								<h3 class="faq__item-title accordion__title">Планируется ли организация полноценной сервисной службы?</h3>
-								<p class="faq__item-text accordion__box">Решить проблему создания разнообразных аналоговых устройств, снизив стоимость и габариты, позволяет использование программируемых аналоговых интегральных схем - ПАИС (FPAA), лидером в производстве которых является компания Anadigm.</p>
-							</li>
-							<li class="faq__item accordion">
-								<h3 class="faq__item-title accordion__title">Почему в марте на улицах снег!?</h3>
-								<p class="faq__item-text accordion__box">Решить проблему создания разнообразных аналоговых устройств, снизив стоимость и габариты, позволяет использование программируемых аналоговых интегральных схем - ПАИС (FPAA), лидером в производстве которых является компания Anadigm.</p>
-							</li>
-						</form>
-					</section>
+
+						<div class="application__form form">
+							<h3 class="form__title subtitle">Заявка №124 от 13.04.2016</h3>
+							<table class="form__table-application">
+								<tr class="form__table-application-head">
+									<th class="form__table-application-number">Номер</th>
+									<th class="form__table-application-name">Наименование</th>
+									<th class="form__table-application-quantity">Кол-во</th>
+								</tr>
+								<tr class="form__table-application-row">
+									<td class="form__table-application-number">AN231E04-E2 -QFNTY</td>
+									<td class="form__table-application-name">Динамически программируемая аналоговая микросхема 3-го поколения</td>
+									<td class="form__table-application-quantity">25</td>
+								</tr>
+								<tr class="form__table-application-row">
+									<td class="form__table-application-number">AN231E04-E2 -QFNTY</td>
+									<td class="form__table-application-name">Динамически программируемая аналоговая микросхема 3-го поколения</td>
+									<td class="form__table-application-quantity">8</td>
+								</tr>
+								<tr class="form__table-application-row">
+									<td class="form__table-application-number">AN231E04-E2 -QFNTY</td>
+									<td class="form__table-application-name">Динамически программируемая аналоговая микросхема 3-го поколения</td>
+									<td class="form__table-application-quantity">50</td>
+								</tr>
+							</table>
+						</div>
+
+					</form>
 
 				</main>
 			</div>

@@ -43,3 +43,327 @@
         }
     }
 }
+
+.card__characteristics {
+    margin: 35px 0 0 0;
+}
+.card__characteristics-list {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    color: $gray;
+    li {
+        position: relative;
+        padding: 0 0 0 12px;
+        margin: 5px 0 0 0;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: currentColor;
+        }
+    }
+}
+.card__characteristics-text {
+    margin: 20px 0 0 0;
+    p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    ul {
+        li {
+            margin: 5px 0 0 0;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $main-color;
+        transition: all 0.5s ease;
+        &:active,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    *:first-child {
+        margin-top: 0;
+    }
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.card__info {
+    margin: 35px 0 0 0
+}
+.card__info-table {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0 0 0;
+    border-collapse: collapse;
+
+    font-size: 12px;
+}
+.card__info-table-number,
+.card__info-table-name,
+.card__info-table-availability,
+.card__info-table-button {
+    padding: 7px 10px;
+    border: 1px solid #c0c0c0;
+}
+.card__info-table-head {
+    background-color: #f6f6f6;
+    color: $gray;
+    .card__info-table-number,
+    .card__info-table-name,
+    .card__info-table-availability,
+    .card__info-table-button {
+        font-weight: 400;
+    }
+}
+.card__info-table-button {
+    position: relative;
+}
+.card__info-order,
+.card__info-succsess {
+    position: absolute;
+    z-index: 1;
+    //right: -15px;
+    right: 50%;
+    top: -3px;
+    //transform: translateY(-100%);
+    transform: translate(50%, -100%);
+    max-width: 280px;
+    width: 280px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #c0c0c0;
+    box-shadow: 0 10px 100px rgba(0,0,0,.5);
+    &:before {
+        content: '';
+        position: absolute;
+        //right: 70px;
+        right: 50%;
+        bottom: 0;
+        // transform: translateY(55%) rotate(45deg);
+        transform: translate(50%, 55%) rotate(45deg);
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-right: 1px solid #c0c0c0;
+        border-bottom: 1px solid #c0c0c0;
+    }
+}
+.card__info-succsess {
+    text-align: center;
+}
+.card__info-order-close,
+.card__info-succsess-close {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    display: block;
+    outline: none;
+    padding: 0;
+    z-index: 1046;
+    box-shadow: none;
+    touch-action: manipulation;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    color: $main-color;
+    font-style: normal;
+    font-size: 28px;
+    font-family: inherit;
+}
+.card__info-order-title {
+    font-size: 15px;
+    color: $gray;
+}
+.card__info-succsess-title {
+    font-size: 15px;
+    color: $gray;
+    a {
+        text-decoration: none;
+        color: $main-color;
+        transition: all .5s ease;
+        &:hover, &:active {
+            text-decoration: underline;
+        }
+     }
+}
+.card__info-succsess-button-close {
+    margin: 15px 0 0 0;
+}
+.card__info-order-form {
+    margin: 15px 0 0 0;
+
+    display: flex;
+    justify-content: space-between;
+    input {
+
+    }
+    button {
+
+    }
+}
+.card__info-order-input {
+    flex: 0 0 auto;
+    display: block;
+    height: 27px;
+    width: 100px;
+
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+
+
+    padding: 3px 10px;
+
+    border: 1px solid #b2b2b2;
+    font: inherit;
+}
+.card__info-order-button {
+    flex: 0 0 auto;
+}
+
+.card__info-footer {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card__info-links {
+    margin: 20px 20px 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        margin: 7px 0 0 0;
+        a {
+            text-decoration: none;
+            color: $gray;
+            transition: all .5s ease;
+            &:hover, &:active {
+                text-decoration: underline;
+            }
+            i[class^="icon-"]{
+                margin-right: 7px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.card__info-sign {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    color: $gray;
+    li {
+        margin: 3px 0 0 0;
+        i[class^="icon-"]{
+            margin-right: 7px;
+            text-decoration: none;
+        }
+    }
+}
+@media only screen and (max-width : 1130px) {
+    .card__info-order,
+    .card__info-succsess {
+        right: -15px;
+        transform: translateY(-100%);
+        &:before {
+            right: 70px;
+            transform: translateY(55%) rotate(45deg);
+        }
+    }
+}
+@media only screen and (max-width : 980px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .card__header {
+        display: block;
+    }
+    .card__header-img {
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+    }
+    .card__header-links {
+        margin: 20px 0 0 0;
+        width: auto;
+    }
+
+    .card__info-table {
+        display: block;
+        overflow-x: auto;
+        tbody {
+            display: block;
+        }
+    }
+    .card__info-table-head {
+        display: none;
+    }
+    .card__info-table-row {
+        display: flex;
+        flex-wrap: wrap;
+        &:last-child {
+            border-bottom: 1px solid #c0c0c0;
+        }
+    }
+    .card__info-table-number {
+        flex: 0 0 auto;
+        display: block;
+        width: 30%;
+        background-color: #f6f6f6;
+        border-bottom: none;
+        border-right: none;
+    }
+    .card__info-table-name {
+        flex: 0 0 auto;
+        display: block;
+        width: 70%;
+        background-color: #f6f6f6;
+        border-bottom: none;
+    }
+    .card__info-table-availability {
+        flex: 0 0 auto;
+        display: block;
+        width: 30%;
+        border-bottom: none;
+        border-right: none;
+    }
+    .card__info-table-button {
+        flex: 0 0 auto;
+        display: block;
+        width: 70%;
+        border-bottom: none;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}
