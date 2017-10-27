@@ -84,15 +84,6 @@
         margin: 5px 20px 0 0;
         color: $gray;
     }
-    &.form__field_required {
-        span {
-            &:after {
-                content: ' *';
-                color: $main-color;
-                font-size: 12px;
-            }
-        }
-    }
     .form__field-file {
         position: relative;
         flex: 0 0 auto;
@@ -159,6 +150,13 @@
             color: $main-color;
             font-size: 12px;
         }
+    }
+}
+.form__field.form__field-disabled {
+    input:disabled {
+        //padding-left: 0;
+        border-color: rgba(0,0,0,0);
+        color: #000;
     }
 }
 .form__link {

@@ -180,8 +180,31 @@ $(function() {
     });
 
 
+
     /*******************************************************/
-    //VISUAL EXAMPLE OF INTERACTION OF ORDER FORM
+    //REMOVE PRODUCT FROM BASKET
+    /*******************************************************/
+
+    $('.form__table-basket-delete-button').on('click', function() {
+        $(this).closest('.form__table-basket-row').remove();
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    /*******************************************************/
+    //VISUAL EXAMPLE OF INTERACTION OF THE ORDER FORM
     /*******************************************************/
     $('.card__info-table-button').on('click', '.card__info-table-button-order', function(e) {
         e.stopPropagation();
@@ -232,12 +255,18 @@ $(function() {
         e.stopPropagation();
     });
 
+
     /*******************************************************/
-    //REMOVE PRODUCT FROM BASKET
+    //VISUAL EXAMPLE OF INTERACTION OF THE PRIVATE OFFICE FORM
     /*******************************************************/
 
-    $('.form__table-basket-delete-button').on('click', function() {
-        $(this).closest('.form__table-basket-row').remove();
+    $('.private__form').on('submit', function(e) {
+        e.preventDefault();
+        $(this).find('.form__field-disabled input').attr('disabled', true).end().find('.private__form-buttons').hide().end().next('.private__buttons').show();
+    });
+
+    $('.private__buttons').on('click', '.private__button-change', function() {
+        $(this).closest('.private__buttons').hide().prev('.private__form').find('.form__field-disabled input').attr('disabled', false).end().find('.private__form-buttons').show();
     });
 
 });

@@ -1,11 +1,5 @@
-.icon-link, .icon-chat, .icon-home, .icon-like, .icon-twit, .icon-goo, .icon-eng, .icon-rus, .icon-authorize, .icon-basket, .icon-nav, .icon-rss, .icon-phone, .icon-email, .icon-loup, .icon-reload, .icon-pdf, .icon-video, .icon-zoom, .icon-list, .icon-print{
+.icon-chat, .icon-home, .icon-like, .icon-twit, .icon-goo, .icon-eng, .icon-rus, .icon-authorize, .icon-basket, .icon-nav, .icon-rss, .icon-phone, .icon-email, .icon-loup, .icon-reload, .icon-pdf, .icon-video, .icon-zoom, .icon-list, .icon-print, .icon-link, .icon-link-small{
 	background: url(sprites.png) no-repeat;
-}
-
-.icon-link{
-	background-position: 0 -307px ;
-	width: 9px;
-	height: 9px;
 }
 
 .icon-chat{
@@ -126,5 +120,17 @@
 	background-position: 0 -473px ;
 	width: 24px;
 	height: 22px;
+}
+
+.icon-link{
+	background-position: 0 -498px ;
+	width: 24px;
+	height: 22px;
+}
+
+.icon-link-small{
+	background-position: 0 -307px ;
+	width: 9px;
+	height: 9px;
 }
 

@@ -75,6 +75,9 @@ body {
 a {
 	outline: none !important;
 }
+.section {
+	padding: 30px 0
+}
 .title {
 	margin: 0;
 	font-size: 30px;
@@ -92,11 +95,17 @@ a {
 }
 .text {
 	margin: 20px 0 0 0;
-	p {
+	* {
+		max-width: 100% !important;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 400;
+	}
+	p,ul,ol,img {
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
-	ul {
+	ul,ol {
 		li {
 			margin: 5px 0 0 0;
 		}
@@ -115,6 +124,14 @@ a {
 	}
 	*:last-child {
 		margin-bottom: 0;
+	}
+	*.align-left {
+		float: left;
+		margin-right: 30px;
+	}
+	*.align-right {
+		float: right;
+		margin-right: 30px;
 	}
 }
 .button {
@@ -163,7 +180,15 @@ a {
 @import "components/card.scss";
 @import "components/basket.scss";
 @import "components/application.scss";
-
+@import "components/private.scss";
+@import "components/news.scss";
+@import "components/news-article.scss";
+@import "components/search.scss";
+@import "components/agent.scss";
+@import "components/agent-article.scss";
+@import "components/publications.scss";
+@import "components/events.scss";
+@import "components/registration.scss";
 
 //ALWAYS END
 //@import "components/media.scss";

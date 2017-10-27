@@ -123,12 +123,18 @@
                     left: 0;
                     transform: translateY(-50%) rotate(45deg);
                 }
+                &:after {
+                    right: 0;
+                }
             }
 
             .owl-next {
                 &:before {
                     right: 0;
                     transform: translateY(-50%) rotate(-135deg);
+                }
+                &:after {
+                    left: 0;
                 }
             }
         }
@@ -193,11 +199,13 @@
 
 .recent__item-date {
     flex: 0 0 auto;
+    display: block;
     width: 30%;
     color: $gray;
 }
 
 .recent__item-day {
+    display: block;
     font-size: 48px;
     font-weight: 300;
 }

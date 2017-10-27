@@ -60,12 +60,6 @@ i[class^="icon-"] {
         content: 'X';
     }
 }
-.icon-link{
-	background-position: 0 -307px ;
-	width: 9px;
-	height: 9px;
-}
-
 .icon-chat{
 	background-position: 0 -259px ;
 	width: 21px;
@@ -184,4 +178,16 @@ i[class^="icon-"] {
 	background-position: 0 -473px ;
 	width: 24px;
 	height: 22px;
+}
+
+.icon-link{
+	background-position: 0 -498px ;
+	width: 24px;
+	height: 22px;
+}
+
+.icon-link-small{
+	background-position: 0 -307px ;
+	width: 9px;
+	height: 9px;
 }
