@@ -1,15 +1,10 @@
-.basket {
-    padding: 30px 0;
-}
-.basket__text {
 
-}
-.basket__form {
+.basket-form {
     margin: 30px 0 0 0;
     border: 1px solid #b2b2b2;
 }
 
-.form__table-basket {
+.basket-table {
     width: 100%;
     max-width: 100%;
     margin: 20px 0 0 0;
@@ -17,26 +12,26 @@
 
     font-size: 12px;
 }
-.form__table-basket-number,
-.form__table-basket-name,
-.form__table-basket-quantity,
-.form__table-basket-unit,
-.form__table-basket-delete {
+.basket-table__number,
+.basket-table__name,
+.basket-table__quantity,
+.basket-table__unit,
+.basket-table__delete {
     padding: 7px 10px;
     border: 1px solid #c0c0c0;
 }
-.form__table-basket-head {
+.basket-table__head {
     background-color: #f6f6f6;
     color: $gray;
-    .form__table-basket-number,
-    .form__table-basket-name,
-    .form__table-basket-quantity,
-    .form__table-basket-unit,
-    .form__table-basket-delete {
+    .basket-table__number,
+    .basket-table__name,
+    .basket-table__quantity,
+    .basket-table__unit,
+    .basket-table__delete {
         font-weight: 400;
     }
 }
-.form__table-basket-quantity-input {
+.basket-table__quantity-input {
     display: block;
     margin: 0;
     width: 40px;
@@ -53,17 +48,17 @@
     font: inherit;
     text-align: center;
 }
-.form__table-basket-unit {
+.basket-table__unit {
     text-align: center;
 }
-.form__table-basket-delete-icon {
+.basket-table__delete-icon {
     width: 27px;
     height: 27px;
     font-size: 30px;
     line-height: 27px;
     font-weight: 300;
 }
-.form__table-basket-delete-button {
+.basket-table__delete-button {
     @include btn;
     width: 27px;
     height: 27px;
@@ -73,12 +68,12 @@
     font-weight: 300;
     color: $main-color;
 }
-.basket__form-add {
+.basket-form__add {
     margin: 20px 0 0 0;
     display: flex;
     align-items: center;
 }
-.basket__form-add-input {
+.basket-form__add-input {
     flex: 1 1 auto;
     display: block;
     margin: 0 20px 0 0;
@@ -95,13 +90,13 @@
     border: 1px solid #b2b2b2;
     font: inherit;
 }
-.basket__form-add-button {
+.basket-form__add-button {
     flex: 0 0 auto;
 }
-.basket__form-comment {
+.basket-form__comment {
     margin: 20px 0 0 0;
 }
-.basket__form-comment-textarea {
+.basket-form__comment-textarea {
     display: block;
     margin: 0;
     width: 100%;
@@ -132,24 +127,24 @@
 }
 
 @media only screen and (max-width : 480px) {
-    .form__table-basket {
+    .basket-table {
         display: block;
         overflow-x: auto;
         tbody {
             display: block;
         }
     }
-    .form__table-basket-head {
+    .basket-table__head {
         display: none;
     }
-    .form__table-basket-row {
+    .basket-table__row {
         display: flex;
         flex-wrap: wrap;
         &:last-child {
             border-bottom: 1px solid #c0c0c0;
         }
     }
-    .form__table-basket-number {
+    .basket-table__number {
         flex: 0 0 auto;
         display: block;
         width: 30%;
@@ -157,24 +152,24 @@
         border-bottom: none;
         border-right: none;
     }
-    .form__table-basket-name {
+    .basket-table__name {
         flex: 0 0 auto;
         display: block;
         width: 70%;
         background-color: #f6f6f6;
         border-bottom: none;
     }
-    .form__table-basket-quantity {
+    .basket-table__quantity {
         flex: 0 0 auto;
         display: block;
         width: 30%;
         border-bottom: none;
         border-right: none;
     }
-    .form__table-basket-quantity-input {
+    .basket-table__quantity-input {
         width: 100%;
     }
-    .form__table-basket-unit {
+    .basket-table__unit {
         flex: 1 1 auto;
         display: block;
         width: auto;
@@ -184,7 +179,7 @@
         display: flex;
         align-items: center;
     }
-    .form__table-basket-delete {
+    .basket-table__delete {
         flex: 0 0 auto;
         display: block;
         border-bottom: none;

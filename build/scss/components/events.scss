@@ -1,49 +1,4 @@
 .events {
-    padding: 30px 0;
-}
-.events__header {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.events__title {
-    flex: 1 1 auto;
-    margin: 0 20px 0 0;
-}
-
-.events__links {
-    flex: 0 1 auto;
-    margin: 10px 0 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-
-    li {
-        margin: 0 20px 0 0;
-
-        &:last-child {
-            margin: 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: $gray;
-            transition: all 0.5s ease;
-
-            &:active,
-            &:hover {
-                text-decoration: underline;
-            }
-
-            i[class^="icon-"] {
-                margin-right: 7px;
-                text-decoration: none;
-            }
-        }
-    }
-}
-.events__box {
     margin: 30px 0 0 0;
 }
 .events__item {

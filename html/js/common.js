@@ -59,7 +59,7 @@ $(function() {
     /*******************************************************/
     //RECENT SLIDER
     /*******************************************************/
-    $('.recent__box').addClass('owl-carousel').owlCarousel({
+    $('.recent').addClass('owl-carousel').owlCarousel({
         loop: true,
         nav: true,
         navText: '',
@@ -167,13 +167,13 @@ $(function() {
                 $(this).find('.nav__tab').first('.nav__tab').addClass('active').siblings('.nav__tab').hide();
             }
 
-            if (  $('.catalog__tab').length ) {
-                 $('.catalog__tab').eq($(this).find('.nav__tab.active').index('.nav__tab')).show().siblings('.catalog__tab').hide();
+            if (  $('.catalog-tab').length ) {
+                 $('.catalog-tab').eq($(this).find('.nav__tab.active').index('.nav__tab')).show().siblings('.catalog-tab').hide();
             }
             $(this).find('.nav__buttons').on('click', 'button:not(.active)', function() {
                 $(this).addClass('active').siblings().removeClass('active').closest('.nav').find('.nav__tab').slideUp(200).eq($(this).index()).slideDown(200);
-                if (  $('.catalog__tab').length ) {
-                     $('.catalog__tab').eq($(this).index()).slideDown(200).siblings('.catalog__tab').slideUp(200);
+                if (  $('.catalog-tab').length ) {
+                     $('.catalog-tab').eq($(this).index()).slideDown(200).siblings('.catalog-tab').slideUp(200);
                 }
             }).find('button').eq($(this).find('.nav__tab.active').index('.nav__tab')).addClass('active');
         }
@@ -185,8 +185,8 @@ $(function() {
     //REMOVE PRODUCT FROM BASKET
     /*******************************************************/
 
-    $('.form__table-basket-delete-button').on('click', function() {
-        $(this).closest('.form__table-basket-row').remove();
+    $('.basket-table__delete-button').on('click', function() {
+        $(this).closest('.basket-table__row').remove();
     });
 
 
@@ -201,54 +201,54 @@ $(function() {
 
 
 
-    
+
 
     /*******************************************************/
     //VISUAL EXAMPLE OF INTERACTION OF THE ORDER FORM
     /*******************************************************/
-    $('.card__info-table-button').on('click', '.card__info-table-button-order', function(e) {
+    $('.card-info__table-button').on('click', '.card-info__table-button-order', function(e) {
         e.stopPropagation();
-        if ( !$(this).closest('.card__info-table-button').children('.card__info-order').length ) {
+        if ( !$(this).closest('.card-info__table-button').children('.card-info__order').length ) {
             var cardInfoOrderMarkup =
-            '<div class="card__info-order">'
-                +'<button type="button" class="card__info-order-close">×</button>'
-                +'<div class="card__info-order-title">Введите количество товара:</div>'
-                +'<form class="card__info-order-form">'
-                    +'<input type="text" value="1" class="card__info-order-input">'
-                    +'<button type="submit" class="card__info-order-button button">добавить</button>'
+            '<div class="card-info__order">'
+                +'<button type="button" class="card-info__order-close">×</button>'
+                +'<div class="card-info__order-title">Введите количество товара:</div>'
+                +'<form class="card-info__order-form">'
+                    +'<input type="text" value="1" class="card-info__order-input">'
+                    +'<button type="submit" class="card-info__order-button button">добавить</button>'
                 +'</form>'
             +'</div>';
-            $(this).closest('.card__info-table').find('.card__info-order').remove();
-            $(this).closest('.card__info-table-button').prepend(cardInfoOrderMarkup);
+            $(this).closest('.card-info__table').find('.card-info__order').remove();
+            $(this).closest('.card-info__table-button').prepend(cardInfoOrderMarkup);
 
         }
 
-        $(this).prev('.card__info-order').on('click', '.card__info-order-button', function(e) {
+        $(this).prev('.card-info__order').on('click', '.card-info__order-button', function(e) {
             e.preventDefault();
 
             var cardInfoSuccessMarkup =
-            '<div class="card__info-succsess">'
-                +'<button type="button" class="card__info-succsess-close">×</button>'
-                +'<div class="card__info-succsess-title">Товар добавлен в <a href="#">корзину</a></div>'
-                +'<button type="button" class="card__info-succsess-button-close button">закрыть</button>'
+            '<div class="card-info__succsess">'
+                +'<button type="button" class="card-info__succsess-close">×</button>'
+                +'<div class="card-info__succsess-title">Товар добавлен в <a href="#">корзину</a></div>'
+                +'<button type="button" class="card-info__succsess-button-close button">закрыть</button>'
             +'</div>';
 
-            $(this).closest('.card__info-table-button').prepend(cardInfoSuccessMarkup);
+            $(this).closest('.card-info__table-button').prepend(cardInfoSuccessMarkup);
 
-            $(this).closest('.card__info-table-button').children('.card__info-succsess').on('click', '.card__info-succsess-close, .card__info-succsess-button-close', function() {
-                $(this).closest('.card__info-succsess').remove();
+            $(this).closest('.card-info__table-button').children('.card-info__succsess').on('click', '.card-info__succsess-close, .card-info__succsess-button-close', function() {
+                $(this).closest('.card-info__succsess').remove();
             });
-            $(this).closest('.card__info-order').remove();
+            $(this).closest('.card-info__order').remove();
         });
-        $(this).prev('.card__info-order').on('click', '.card__info-order-close', function() {
-            $(this).closest('.card__info-order').remove();
+        $(this).prev('.card-info__order').on('click', '.card-info__order-close', function() {
+            $(this).closest('.card-info__order').remove();
         });
 
     });
 
     $(document).on('click', function(e) {
-        if ( !$(e.target).closest('.card__info-succsess, .card__info-order').length ) {
-            $('.card__info-succsess, .card__info-order').remove();
+        if ( !$(e.target).closest('.card-info__succsess, .card-info__order').length ) {
+            $('.card-info__succsess, .card-info__order').remove();
         } else {
             return
         }
@@ -260,13 +260,13 @@ $(function() {
     //VISUAL EXAMPLE OF INTERACTION OF THE PRIVATE OFFICE FORM
     /*******************************************************/
 
-    $('.private__form').on('submit', function(e) {
+    $('.private').on('submit', function(e) {
         e.preventDefault();
-        $(this).find('.form__field-disabled input').attr('disabled', true).end().find('.private__form-buttons').hide().end().next('.private__buttons').show();
+        $(this).find('.form__field-disabled input').attr('disabled', true).end().find('.private__submit').hide().end().next('.private-buttons').show();
     });
 
-    $('.private__buttons').on('click', '.private__button-change', function() {
-        $(this).closest('.private__buttons').hide().prev('.private__form').find('.form__field-disabled input').attr('disabled', false).end().find('.private__form-buttons').show();
+    $('.private-buttons').on('click', '.private-buttons__change', function() {
+        $(this).closest('.private-buttons').hide().prev('.private').find('.form__field-disabled input').attr('disabled', false).end().find('.private__submit').show();
     });
 
 });

@@ -1,15 +1,10 @@
-.application {
-    padding: 30px 0;
-}
-.application__text {
 
-}
-.application__form {
+.application {
     margin: 30px 0 0 0;
     border: 1px solid #b2b2b2;
 }
 
-.form__table-application {
+.application__table {
     width: 100%;
     max-width: 100%;
     margin: 20px 0 0 0;
@@ -17,21 +12,21 @@
 
     font-size: 12px;
 }
-.form__table-application-number,
-.form__table-application-name,
-.form__table-application-quantity {
+.application__table-number,
+.application__table-name,
+.application__table-quantity {
     padding: 7px 10px;
     border: 1px solid #c0c0c0;
 }
-.form__table-application-quantity {
+.application__table-quantity {
     text-align: center;
 }
-.form__table-application-head {
+.application__table-head {
     background-color: #f6f6f6;
     color: $gray;
-    .form__table-application-number,
-    .form__table-application-name,
-    .form__table-application-quantity {
+    .application__table-number,
+    .application__table-name,
+    .application__table-quantity {
         font-weight: 400;
     }
 }
@@ -48,7 +43,7 @@
 }
 
 @media only screen and (max-width : 480px) {
-    .form__table-application {
+    .application__table {
         display: block;
         overflow-x: auto;
     }

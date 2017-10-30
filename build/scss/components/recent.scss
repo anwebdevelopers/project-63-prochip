@@ -2,7 +2,7 @@
     padding: 30px 0 30px 0;
 }
 
-.recent__box {
+.recent {
     margin: 25px 0 0;
 }
 
@@ -49,7 +49,7 @@
     }
 }
 
-.recent__box {
+.recent {
     margin: 25px -10px 0;
     display: flex;
     flex-wrap: wrap;
@@ -272,7 +272,7 @@
 }
 
 @media only screen and (max-width : 768px) {
-    .recent__box {
+    .recent {
         &.owl-carousel {
             .owl-dots {
                 margin: 0 0 0 16px;
@@ -299,7 +299,7 @@
 }
 
 @media only screen and (max-width : 360px) {
-    .recent__box {
+    .recent {
         display: block;
         &.owl-carousel {
             .owl-dots {

@@ -1,12 +1,9 @@
-.card {
-    padding: 30px 0;
-}
-.card__header {
+.card-header {
     margin: 30px 0 0 0;
 
     display: flex;
 }
-.card__header-img {
+.card-header__img {
     flex: 0 0 auto;
     align-self: flex-start;
     margin: 0;
@@ -21,7 +18,7 @@
         height: auto;
     }
 }
-.card__header-links {
+.card-header__links {
     flex: 0 0 auto;
     width: 73%;
     margin: 0 0 0 5%;
@@ -44,10 +41,10 @@
     }
 }
 
-.card__characteristics {
+.card-characteristics {
     margin: 35px 0 0 0;
 }
-.card__characteristics-list {
+.card-characteristics__list {
     margin: 20px 0 0 0;
     padding: 0;
     list-style: none;
@@ -69,7 +66,7 @@
         }
     }
 }
-.card__characteristics-text {
+.card-characteristics__text {
     margin: 20px 0 0 0;
     p {
         margin-top: 20px;
@@ -97,10 +94,10 @@
     }
 }
 
-.card__info {
+.card-info {
     margin: 35px 0 0 0
 }
-.card__info-table {
+.card-info__table {
     width: 100%;
     max-width: 100%;
     margin: 20px 0 0 0;
@@ -108,28 +105,28 @@
 
     font-size: 12px;
 }
-.card__info-table-number,
-.card__info-table-name,
-.card__info-table-availability,
-.card__info-table-button {
+.card-info__table-number,
+.card-info__table-name,
+.card-info__table-availability,
+.card-info__table-button {
     padding: 7px 10px;
     border: 1px solid #c0c0c0;
 }
-.card__info-table-head {
+.card-info__table-head {
     background-color: #f6f6f6;
     color: $gray;
-    .card__info-table-number,
-    .card__info-table-name,
-    .card__info-table-availability,
-    .card__info-table-button {
+    .card-info__table-number,
+    .card-info__table-name,
+    .card-info__table-availability,
+    .card-info__table-button {
         font-weight: 400;
     }
 }
-.card__info-table-button {
+.card-info__table-button {
     position: relative;
 }
-.card__info-order,
-.card__info-succsess {
+.card-info__order,
+.card-info__succsess {
     position: absolute;
     z-index: 1;
     //right: -15px;
@@ -159,11 +156,11 @@
         border-bottom: 1px solid #c0c0c0;
     }
 }
-.card__info-succsess {
+.card-info__succsess {
     text-align: center;
 }
-.card__info-order-close,
-.card__info-succsess-close {
+.card-info__order-close,
+.card-info__succsess-close {
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -187,11 +184,11 @@
     font-size: 28px;
     font-family: inherit;
 }
-.card__info-order-title {
+.card-info__order-title {
     font-size: 15px;
     color: $gray;
 }
-.card__info-succsess-title {
+.card-info__succsess-title {
     font-size: 15px;
     color: $gray;
     a {
@@ -203,10 +200,10 @@
         }
      }
 }
-.card__info-succsess-button-close {
+.card-info__succsess-button-close {
     margin: 15px 0 0 0;
 }
-.card__info-order-form {
+.card-info__order-form {
     margin: 15px 0 0 0;
 
     display: flex;
@@ -218,7 +215,7 @@
 
     }
 }
-.card__info-order-input {
+.card-info__order-input {
     flex: 0 0 auto;
     display: block;
     height: 27px;
@@ -235,17 +232,17 @@
     border: 1px solid #b2b2b2;
     font: inherit;
 }
-.card__info-order-button {
+.card-info__order-button {
     flex: 0 0 auto;
 }
 
-.card__info-footer {
+.card-info__footer {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.card__info-links {
+.card-info__links {
     margin: 20px 20px 0 0;
     padding: 0;
     list-style: none;
@@ -266,7 +263,7 @@
         }
     }
 }
-.card__info-sign {
+.card-info__sign {
     margin: 20px 0 0 0;
     padding: 0;
     list-style: none;
@@ -280,8 +277,8 @@
     }
 }
 @media only screen and (max-width : 1130px) {
-    .card__info-order,
-    .card__info-succsess {
+    .card-info__order,
+    .card-info__succsess {
         right: -15px;
         transform: translateY(-100%);
         &:before {
@@ -303,37 +300,37 @@
 }
 
 @media only screen and (max-width : 480px) {
-    .card__header {
+    .card-header {
         display: block;
     }
-    .card__header-img {
+    .card-header__img {
         display: inline-block;
         vertical-align: top;
         width: auto;
     }
-    .card__header-links {
+    .card-header__links {
         margin: 20px 0 0 0;
         width: auto;
     }
 
-    .card__info-table {
+    .card-info__table {
         display: block;
         overflow-x: auto;
         tbody {
             display: block;
         }
     }
-    .card__info-table-head {
+    .card-info__table-head {
         display: none;
     }
-    .card__info-table-row {
+    .card-info__table-row {
         display: flex;
         flex-wrap: wrap;
         &:last-child {
             border-bottom: 1px solid #c0c0c0;
         }
     }
-    .card__info-table-number {
+    .card-info__table-number {
         flex: 0 0 auto;
         display: block;
         width: 30%;
@@ -341,21 +338,21 @@
         border-bottom: none;
         border-right: none;
     }
-    .card__info-table-name {
+    .card-info__table-name {
         flex: 0 0 auto;
         display: block;
         width: 70%;
         background-color: #f6f6f6;
         border-bottom: none;
     }
-    .card__info-table-availability {
+    .card-info__table-availability {
         flex: 0 0 auto;
         display: block;
         width: 30%;
         border-bottom: none;
         border-right: none;
     }
-    .card__info-table-button {
+    .card-info__table-button {
         flex: 0 0 auto;
         display: block;
         width: 70%;

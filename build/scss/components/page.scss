@@ -275,11 +275,15 @@
 
 @media only screen and (max-width : 768px) {
     .page__box {
-        display: block;
+        flex-direction: column;
     }
-    .page__main,
+    .page__main {
+        order: 0;
+        width: 100%;
+    }
     .page__aside {
-        width: auto;
+        order: 1;
+        width: 100%;
     }
     .page__aside {
         display: flex;

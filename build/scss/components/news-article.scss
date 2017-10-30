@@ -1,16 +1,11 @@
-.news-article {
-    padding: 30px 0;
-}
-.news-article__box {
-    margin: 30px 0 0 0;
-}
-.news-article__share {
+
+.share {
     margin: 20px 0 0 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.news-article__share-item {
+.share__item {
     flex: 0 1 auto;
     display: block;
     margin: 20px 20px 0 0;
@@ -38,25 +33,25 @@
     span {
         vertical-align: middle;
     }
-    &.news-article__share-item_like {
+    &.share__item_like {
         background-color: #4668b1;
         border-bottom-color: #203e7f;
     }
-    &.news-article__share-item_twit {
+    &.share__item_twit {
         background-color: #1696df;
         border-bottom-color: #087dc0;
     }
-    &.news-article__share-item_goo {
+    &.share__item_goo {
         background-color: #d2553c;
         border-bottom-color: #a93e27;
     }
 }
-.news-article__links {
+.news-article-links {
     margin: 40px 0 0 0;
     padding: 0;
     list-style: none;
     border-top: 1px solid #d2d2d2;
-    
+
     display: flex;
     flex-wrap: wrap;
     li {
